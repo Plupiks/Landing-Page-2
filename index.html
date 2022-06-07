@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Gallery -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
+  <!-- AOS -->
+  <link rel=" stylesheet" href="libs/aos.js/aos.css">
+
+
+  <!-- Fonts Start -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600&family=Raleway:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1774739131.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/fonts/fontello-standart-icons/css/fontello.css">
+  <!-- Fonts END -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root {
+      --mainTextColor: #272829;
+      --mainColor: #45505b;
+      --aboutBlockTitleColor: #728394;
+
+      --linkBackground: #f2f3f5;
+      --linkHoverColor: #fff;
+
+      --lineBGColor: #ddd;
+
+      --burgerMenuBG: #fff;
+      --burgerMenuLines: #45505b;
+      --burgerMenuLinesHover: #FFF;
+
+
+      --secondaryColor: #0563bb;
+      --secondaryColorHover: #2679c7;
+
+      --iconHoverColor: #717c88;
+
+      --factsIcons: #fff;
+      --factsNumColor: #011426;
+
+      --portfolioImageBG: rgba(231, 231, 231, 0.7);
+
+      --servicesIcon1: #47aeff;
+      --servicesIcon2: #ffa76e;
+      --servicesIcon3: #e80368;
+      --servicesIconHover: #fff;
+
+      --buttonUpArrow: #fff;
+
+      --footerBG: #5e9eda;
+      --footerTextColor: #fff;
+      --linkHover: #fad24d;
+    }
+  </style>
+  <title>Main</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+  <div class="header__body">
+    <nav class="header__nav nav">
+      <ul class="nav__links">
+        <li class="nav__link link">
+          <a href="#s-hero" class="link__items">
+            <i class="icon-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav__link link">
+          <a href="#s-about" class="link__items">
+            <i class="icon-account"></i>
+            <span>About</span>
+          </a>
+        </li>
+        <li class="nav__link link">
+          <a href="#s-portfolio" class="link__items">
+            <i class="icon-book"></i>
+            <span>Portfolio</span>
+          </a>
+        </li>
+        <li class="nav__link link">
+          <a href="#s-services" class="link__items">
+            <i class="icon-server"></i>
+            <span>Services</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="burger-menu">
+  <input class="checkbox" type="checkbox" id="checkbox"></input>
+  <label class="burger-menu__lines" for="checkbox">
+    <div class="burger-menu__line"></div>
+    <div class="burger-menu__line"></div>
+    <div class="burger-menu__line"></div>
+  </label>
+</div>
+<div class="backdrop"></div>
+
+    <main>
+      <section class="hero" style="background: url(img/hero-bg.jpg) no-repeat center right /cover rgba(255, 255, 255, 0.5)"
+  id="s-hero">
+  <div class="container">
+    <div class="hero__body">
+      <h1 class="hero__title" data-aos="zoom-in" data-aos-delay="100">Brandon Johnson</h1>
+      <div class="hero__descr" data-aos="fade-left" data-aos-delay="100">
+        I'm
+        <span class="typed" id="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span>
+      </div>
+      <div class="hero__social social" data-aos="fade-left" data-aos-delay="100">
+        <a href="#" class="social__item">
+          <i class="icon-twitter-icon"></i>
+        </a>
+        <a href="#" class="social__item">
+          <i class="icon-facebook-icon"></i>
+        </a>
+        <a href="#" class="social__item">
+          <i class="icon-instagram-icon"></i>
+        </a>
+        <a href="#" class="social__item">
+          <i class="icon-linkedin-icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="about" id="s-about">
+  <div class="container">
+    <div class="about__body">
+      <h2 class="about__title section-title" data-back-text="ABOUT ME" data-aos="fade-left">ABOUT ME</h2>
+      <div class="about__descr section-descr" data-aos="fade-left" data-aos-delay="150">
+        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in
+        iste officiis commodi quidem hic quas.
+      </div>
+      <div class="about__content">
+        <!-- column 1 -->
+        <div class="about__column about__column_1" data-aos="zoom-in" data-aos-delay="200">
+          <div class="about__image" style="background: url(img/about-img.jpg) no-repeat center /cover"
+            data-fancybox="gallery-single" data-src="img/about-img.jpg">
+          </div>
+        </div>
+        <!-- column 1 -->
+
+        <!-- column 2 -->
+        <div class="about__column about__column_2">
+          <h3 class="about__block-title" data-aos="fade-up" data-aos-delay="250">UI/UX Designer & Web Developer.</h3>
+          <div class="about__block-text" data-aos="fade-up" data-aos-delay="250">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.
+          </div>
+          <div class="about__row about-row">
+            <div class="about-row__column">
+              <!-- List 1 -->
+              <ul class="about-row__list" data-aos="fade-up" data-aos-delay="200">
+                <li class="about-row__list-item list-item">
+                  <i class="icon-arrow-right-icon"></i>
+                  <span>
+                    <strong>Birthday:</strong>
+                    1 May 1995</span>
+                </li>
+                <li class="about-row__list-item list-item">
+                  <i class="icon-arrow-right-icon"></i>
+                  <span>
+                    <strong>Website:</strong>
+                    www.example.com</span>
+                </li>
+                <li class="about-row__list-item list-item">
+                  <i class="icon-arrow-right-icon"></i>
+                  <span>
+                    <strong>Phone:</strong>
+                    +123 456 7890</span>
+                </li>
+                <li class="about-row__list-item list-item">
+                  <i class="icon-arrow-right-icon"></i>
+                  <span>
+                    <strong>City:</strong>
+                    New York, USA</span>
+                </li>
+              </ul>
+              <!-- List 1 -->
+
+              <!-- List 2 -->
+              <ul class="about-row__list" data-aos="fade-up" data-aos-delay="200">
+                <li class="about-row__list-item list-item">
+                  <i class="icon-arrow-right-icon"></i>
+                  <span>
+                    <strong>Age:</strong>
+                    30</span>
+                </li>
+                <li class="about-row__list-item list-item">
+                  <i class="icon-arrow-right-icon"></i>
+                  <span>
+                    <strong>Degree:</strong>
+                    Master</span>
+                </li>
+                <li class="about-row__list-item list-item">
+                  <i class="icon-arrow-right-icon"></i>
+                  <span>
+                    <strong>PhEmailone:</strong>
+                    email@example.com</span>
+                </li>
+                <li class="about-row__list-item list-item">
+                  <i class="icon-arrow-right-icon"></i>
+                  <span>
+                    <strong>Freelance:</strong>
+                    Available</span>
+                </li>
+              </ul>
+              <!-- List 2 -->
+            </div>
+          </div>
+          <div class="about__row about-row">
+            <div class="about-row__block-text" data-aos="fade-up" data-aos-delay="250">
+              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et
+              ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis
+              quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat
+              cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
+            </div>
+          </div>
+        </div>
+        <!-- column 2 -->
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="facts" id="s-facts">
+  <div class="container">
+    <div class="facts__body">
+      <h2 class="facts__title section-title">Facts</h2>
+      <div class="facts__descr section-descr">
+        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in
+        iste officiis commodi quidem hic quas.
+      </div>
+      <ul class="facts__content">
+        <li class="facts__content_items">
+          <div class="facts-ci">
+            <i class="fa-regular fa-face-smile"></i>
+            <div class="facts-ci__number" data-count="232">0</div>
+            <label class="facts-ci__label">Happy Clients</label>
+          </div>
+        </li>
+        <li class="facts__content_items">
+          <div class="facts-ci">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <div class="facts-ci__number" data-count="521">0</div>
+            <label class="facts-ci__label">Projects</label>
+          </div>
+        </li>
+        <li class="facts__content_items">
+          <div class="facts-ci">
+            <i class="fa-solid fa-headset"></i>
+            <div class="facts-ci__number" data-count="1465">0</div>
+            <label class="facts-ci__label">Hours Of Support</label>
+          </div>
+        </li>
+        <li class="facts__content_items">
+          <div class="facts-ci">
+            <i class="fa-solid fa-award"></i>
+            <div class="facts-ci__number" data-count="25">0</div>
+            <label class="facts-ci__label">Awards</label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+      <section class="skills" id="s-skills">
+  <div class="container">
+    <div class="skills__body">
+      <h2 class="skills__title section-title">SKILLS</h2>
+      <div class="skills__descr section-descr">
+        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in
+        iste officiis commodi quidem hic quas.
+      </div>
+      <div class="skills__content">
+        <div class="skills__row skills-row">
+          <!-- Progress 1 -->
+          <div class="skills-row__row">
+            <div class="skills-row__progress progress">
+              <div class="progress__text">
+                <span class="progress__label progress__label_name">HTML</span>
+                <span class="progress__label progress__label_value progress__label_value1">100%</span>
+              </div>
+              <div class="progress__bar">
+                <div class="progress__bar_fill progress__bar_fill1" data-percent="20"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Progress 1 -->
+
+          <!-- Progress 2 -->
+          <div class="skills-row__row">
+            <div class="skills-row__progress progress">
+              <div class="progress__text">
+                <span class="progress__label progress__label_name">CSS</span>
+                <span class="progress__label progress__label_value progress__label_value2">90%</span>
+              </div>
+              <div class="progress__bar">
+                <div class="progress__bar_fill progress__bar_fill2" data-percent="50"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Progress 2 -->
+
+          <!-- Progress 3 -->
+          <div class="skills-row__row">
+            <div class="skills-row__progress progress">
+              <div class="progress__text">
+                <span class="progress__label progress__label_name">JavaScript</span>
+                <span class="progress__label progress__label_value progress__label_value3">75%</span>
+              </div>
+              <div class="progress__bar">
+                <div class="progress__bar_fill progress__bar_fill3" data-percent="45"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Progress 3 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="portfolio" id="s-portfolio">
+  <div class="container">
+    <div class="portfolio__body portfolio-body">
+      <h2 class="portfolio-body__title section-title" data-back-text="MY PORTFOLIO" data-aos="fade-left">MY
+        PORTFOLIO</h2>
+      <div class="portfolio-body__descr section-descr" data-aos="fade-left" data-aos-delay="150">
+        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in
+        iste officiis commodi quidem hic quas.
+      </div>
+      <ul class="portfolio-body__filter filter">
+
+        <!-- Меню фільтру -->
+        <li class="filter__item-body" data-filter="all" data-aos="fade-left" data-aos-delay="250">
+          <div class="filter__item filter__item_active">All</div>
+        </li>
+        <li class="filter__item-body" data-filter="1" data-filter="all" data-aos="fade-left" data-aos-delay="350">
+          <div class="filter__item">App</div>
+        </li>
+        <li class="filter__item-body" data-filter="2" data-filter="all" data-aos="fade-left" data-aos-delay="450">
+          <div class="filter__item">Card</div>
+        </li>
+        <li class="filter__item-body" data-filter="3" data-filter="all" data-aos="fade-left" data-aos-delay="550">
+          <div class="filter__item">Web</div>
+        </li>
+      </ul>
+      <div class="filter-container">
+        <!-- content block1 -->
+        <div class=" filter-content__item filtr-item" data-category="1" data-sort="value">
+          <img class="filter-content__item-img" src="img/portfolio-4.jpg" alt="portfolio section"
+            data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="100">
+          <div class="filter-content__item-info">
+            <span>App 02</span>
+          </div>
+        </div>
+        <!-- content block1 -->
+
+        <!-- content block2 -->
+        <div class=" filter-content__item filtr-item" data-category="3" data-sort="value">
+          <img class="filter-content__item-img" src="img/portfolio-3.jpg" alt="portfolio section"
+            data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="300">
+          <div class="filter-content__item-info">
+            <span>Web 01</span>
+          </div>
+        </div>
+        <!-- content block2 -->
+
+        <!-- content block3 -->
+        <div class=" filter-content__item filtr-item" data-category="1" data-sort="value">
+          <img class="filter-content__item-img" src="img/portfolio-7.jpg" alt="portfolio section"
+            data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="100">
+          <div class="filter-content__item-info">
+            <span>App 03</span>
+          </div>
+        </div>
+        <!-- content block3 -->
+
+        <!-- content block4 -->
+        <div class=" filter-content__item filtr-item" data-category="2" data-sort="value">
+          <img class="filter-content__item-img" src="img/portfolio-5.jpg" alt="portfolio section"
+            data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="200">
+          <div class="filter-content__item-info">
+            <span>Card 02</span>
+          </div>
+        </div>
+        <!-- content block4 -->
+
+        <!-- content block5 -->
+        <div class=" filter-content__item filtr-item" data-category="2" data-sort="value">
+          <img class="filter-content__item-img" src="img/portfolio-2.jpg" alt="portfolio section"
+            data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="200">
+          <div class="filter-content__item-info">
+            <span>Card 01</span>
+          </div>
+        </div>
+        <!-- content block5 -->
+
+        <!-- content block6 -->
+        <div class="filter-content__item filtr-item" data-category="1" data-sort="value">
+          <img class="filter-content__item-img" src="img/portfolio-1.jpg" alt="portfolio section"
+            data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="100">
+          <div class="filter-content__item-info">
+            <span>App 01</span>
+          </div>
+        </div>
+        <!-- content block6 -->
+
+        <!-- content block7 -->
+        <div class=" filter-content__item filtr-item" data-category="2" data-sort="value">
+          <img class="filter-content__item-img" src="img/portfolio-8.jpg" alt="portfolio section"
+            data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="200">
+          <div class="filter-content__item-info">
+            <span>Card 03</span>
+          </div>
+        </div>
+        <!-- content block7 -->
+
+        <!-- content block8 -->
+        <div class=" filter-content__item filtr-item" data-category="3" data-sort="value">
+          <img class="filter-content__item-img" src="img/portfolio-6.jpg" alt="portfolio section"
+            data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="300">
+          <div class="filter-content__item-info">
+            <span>Web 02</span>
+          </div>
+        </div>
+        <!-- content block8 -->
+
+        <!-- content block9 -->
+        <div class=" filter-content__item filtr-item" data-category="3" data-sort="value">
+          <img class="filter-content__item-img" src="img/portfolio-9.jpg" alt="portfolio section"
+            data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="300">
+          <div class="filter-content__item-info">
+            <span>Web 03</span>
+          </div>
+        </div>
+        <!-- content block9 -->
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="services" id="s-services">
+  <div class="container">
+    <div class="services__body">
+      <div class="services__title section-title" data-aos="fade-left">SERVICES</div>
+      <div class="services__descr section-descr" data-aos="fade-left" data-aos-delay="150">
+        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in
+        iste officiis commodi quidem hic quas.
+      </div>
+      <div class="services__content">
+        <div class="services__row">
+          <!-- Col 1 -->
+          <div class="services__column services-column__icon_blue" data-aos="fade-left" data-aos-delay="250">
+            <div class="services-column">
+              <div class="services-column__icon" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fa-brands fa-dribbble"></i>
+                <svg fill="#f5f5f5" width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0"
+                    d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="services-column__title">Lorem Ipsum</h3>
+              <div class="services-column__text">
+                Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+              </div>
+            </div>
+          </div>
+          <!-- Col 1 -->
+
+          <!-- Col2 -->
+          <div class="services__column services-column__icon_orange" data-aos="fade-left" data-aos-delay="350">
+            <div class="services-column">
+              <div class="services-column__icon" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fa-regular fa-file"></i>
+                <svg fill="#f5f5f5" width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0"
+                    d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="services-column__title">Sed Perspiciatis</h3>
+              <div class="services-column__text">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+              </div>
+            </div>
+          </div>
+          <!-- Col 2 -->
+
+          <!-- Col 3 -->
+          <div class="services__column services-column__icon_pink" data-aos="fade-left" data-aos-delay="450">
+            <div class="services-column">
+              <div class="services-column__icon" data-aos="zoom-in" data-aos-delay="500">
+                <i class="fa-solid fa-gauge-simple-high"></i>
+                <svg fill="#f5f5f5" width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0"
+                    d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="services-column__title">Magni Dolores</h3>
+              <div class="services-column__text">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+              </div>
+            </div>
+          </div>
+          <!-- Col 3 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+     <footer class=" footer">
+   <div class="container">
+     <div class="footer--body">
+       <div class="footer--top ft">
+         <div class="ft--left-item fli ft--items">
+           <div class="fli--address">
+             A108 Adam Street
+             NY 535022, USA
+           </div>
+           <div class="fli--phone">
+             <span class="fli--phone-title">Phone:</span>
+             <span class="fli--phone-text fli--text">+1 5589 55488 55</span>
+           </div>
+           <div class="fli--mail">
+             <span class="fli--mail-title ">Email:</span>
+             <span class="fli--mail-text fli--text">info@example.com</span>
+           </div>
+           <div class="fli--social">
+             <a href="#" class="fli--social-item">
+               <i class="icon-twitter-icon"></i>
+             </a>
+             <a href="#" class="fli--social-item">
+               <i class="icon-facebook-icon"></i>
+             </a>
+             <a href="#" class="fli--social-item">
+               <i class="icon-instagram-icon"></i>
+             </a>
+             <a href="#" class="fli--social-item">
+               <i class="icon-linkedin-icon"></i>
+             </a>
+           </div>
+         </div>
+         <div class="ft--center-item fci ft--items">
+           <ul class="fci--list">
+             <!--START BLOCK Hero-->
+             <a href="#s-hero" class="fci--link">
+               <i class="icon-arrow-right-icon"></i>
+               <span>Home</span>
+             </a>
+             <!-- END BLOCK Hero-->
+
+             <!--START BLOCK About-->
+             <a href="#s-about" class="fci--link">
+               <i class="icon-arrow-right-icon"></i>
+               <span>About</span>
+             </a>
+             <!-- END BLOCK About-->
+
+             <!--START BLOCK Portfolio-->
+             <a href="#s-portfolio" class="fci--link">
+               <i class="icon-arrow-right-icon"></i>
+               <span>Portfolio</span>
+             </a>
+             <!-- END BLOCK Portfolio-->
+
+             <!--START BLOCK Services-->
+             <a href="#s-services" class="fci--link">
+               <i class="icon-arrow-right-icon"></i>
+               <span>Services</span>
+             </a>
+             <!-- END BLOCK Services-->
+
+             <!--START BLOCK Impressum-->
+             <a href="impressum.html" class="fci--link">
+               <i class="icon-arrow-right-icon"></i>
+               <span>Impressum und Datenschutzerklärung</span>
+             </a>
+             <!-- END BLOCK Impressum-->
+           </ul>
+         </div>
+         <div class="ft--right-item fri ft--items">
+           <h4 class="fri--title">Footer Info</h4>
+           <div class="fri--text">
+             Ihre Website ist so programmiert, dass sie keine Cookies sammelt, deswegen brauchen Sie auch
+             keine
+             weiteren
+             Zustimmungsfenstern für eine Zuslassung der Cookies. Das wird auch in ihrer - Ihre Website ist
+             so
+             programmiert, dass sie keine Cookies sammelt, deswegen brauchen Sie auch keine weiteren
+             Zustimmungsfenstern
+             für eine Zuslassung der Cookies. Das wird auch in ihrer
+           </div>
+         </div>
+       </div>
+       <div class="footer--bottom fb">
+         <div class="fb--text">
+           Deine Webseite - All Rights Reserved
+         </div>
+       </div>
+     </div>
+ </footer>
+
+    <button class="button-up">
+      <i class="icon-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  </script>
+
+  <!-- Type Js -->
+  <script src="libs/typed.js/typed.min.js"></script>
+
+  <!-- Fancybox -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+  <!-- Count up -->
+  <script src="libs/countUp.js/countUp.js"></script>
+
+  <!-- Filter -->
+  <script src="libs/filterizr.js/jquery.filterizr.min.js"></script>
+
+  <!-- AOS -->
+  <script src="libs/aos.js/aos.js"></script>
+
+  <script src="js/app.js"></script>
+  <!-- Fiter Options / AOS Options -->
+  <script>
+    const options = {
+      animationDuration: 0.5,
+      delay: -20,
+      delayMode: 'progressive',
+      easing: 'ease-in-out',
+      filter: 'all',
+      filterOutCss: {
+        opacity: 0,
+        transform: 'scale(0.5)'
+      },
+      filterInCss: {
+        opacity: 1,
+        transform: 'scale(1)'
+      },
+      layout: 'sameSize',
+    }
+    const filterizr = new Filterizr('.filter-container', options);
+
+    AOS.init({
+      // Global settings:
+      disable: 'mobile',
+      once: true,
+      duration: 1000,
+      delay: 100,
+      anchorPlacement: 'top'
+    });
+  </script>
+</body>
+
+</html>
