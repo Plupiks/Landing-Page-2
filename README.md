@@ -1,4 +1,4 @@
-> #Landing page for Creator
+# Landing Page (Creator-2)
 
 ![](https://github.com/Plupiks/Landing-Page-Creator-2/blob/faa66cdcbc9f9f13df97f6a643cb3053b4690942/img/creator2.jpg)
 
