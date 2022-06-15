@@ -13,7 +13,7 @@ The following elements are present in this landing:
 
 ## Libraries used
 - `Count.js` - number count animation
-- `Filterizr.js` - javascript element filter
+- `Filterizr.js` - DOM element filter
 - `Fancybox.js` - image gallery
 
 <br>
