@@ -10,7 +10,6 @@ The following elements are present in this landing:
 - Photo gallery with filter and animation when hovering
 
 <br>
-<br>
 
 ## Libraries used
 - `Count.js` - number count animation
@@ -18,9 +17,9 @@ The following elements are present in this landing:
 - `Fancybox.js` - image gallery
 
 <br>
-<br>
 
 ## My Portfolio Link
+<br>
 <div id="portfolio" align="left">
   <a href="https://www.upwork.com/freelancers/~0175a1803535823693">
     <img src="https://github.com/Plupiks/Landing-Page-Creator-2/blob/main/img/upwork-1.svg" alt="Upwork" width="40" height="40"/>
