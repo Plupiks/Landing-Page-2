@@ -12,9 +12,9 @@ The following elements are present in the dhow landing page:
 
 <div id="portfolio" align="center">
   <a href="https://www.upwork.com/freelancers/~0175a1803535823693">
-    <img src="https://github.com/Plupiks/Landing-Page-Creator-2/blob/main/img/upwork-1.svg" alt="Upwork" width=”21px”/>
+    <img src="https://github.com/Plupiks/Landing-Page-Creator-2/blob/main/img/upwork-1.svg" alt="Upwork" width="21" height="21"/>
   </a>
    <a href="https://www.weblancer.net/users/VasylykivV/">
-    <img src="https://github.com/Plupiks/Landing-Page-Creator-2/blob/main/img/weblancer.png" alt="Weblancer" width=”21px”/>
+    <img src="https://github.com/Plupiks/Landing-Page-Creator-2/blob/main/img/weblancer.png" alt="Weblancer" width="21" height="21"/>
   </a>
 </div>
