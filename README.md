@@ -19,7 +19,7 @@ The following elements are present in this landing:
 <br>
 
 ## Page link
-[link](https://plupiks.github.io/Landing-Page-Creator-2/)
+[Link to the working page](https://plupiks.github.io/Landing-Page-Creator-2/)
 
 <br>
 
