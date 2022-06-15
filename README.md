@@ -18,6 +18,11 @@ The following elements are present in this landing:
 
 <br>
 
+## Page link
+[link](https://plupiks.github.io/Landing-Page-Creator-2/)
+
+<br>
+
 ## My Portfolio Link
 <div id="portfolio" align="left">
   <a href="https://www.upwork.com/freelancers/~0175a1803535823693">
