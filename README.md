@@ -2,7 +2,7 @@
 
 ![](https://github.com/Plupiks/Landing-Page-Creator-2/blob/faa66cdcbc9f9f13df97f6a643cb3053b4690942/img/creator2.jpg)
 
-
+<div>
 The following elements are present in this landing:
 - Menu / Burger menu with animation when scrolling, there is a scroll to the section when you click on the link. Animated burger menu button on mobile devices. Hover effect when hovering over a menu item.
 - Ability to view the image you clicked.
@@ -11,14 +11,17 @@ The following elements are present in this landing:
 - Photo gallery with filter and animation when hovering
 &nbsp;
 &nbsp;
+</div>
+
 
 ## Libraries used
+<div>
 - `Count.js` - number count animation
 - `Filterizr.js` - javascript element filter
 - `Fancybox.js` - image gallery
 &nbsp;
 &nbsp;
-
+</div>
 
 ## My Portfolio Link
 <div id="portfolio" align="left">
