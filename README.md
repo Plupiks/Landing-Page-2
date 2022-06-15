@@ -9,14 +9,16 @@ The following elements are present in this landing:
 - Animation of filling the progress bar when scrolling (using JavaScript)
 - Photo gallery with filter and animation when hovering
 
+<br>
+<br>
 
 ## Libraries used
-<br>
-<br>
-<br>
 - `Count.js` - number count animation
 - `Filterizr.js` - javascript element filter
 - `Fancybox.js` - image gallery
+
+<br>
+<br>
 
 ## My Portfolio Link
 <div id="portfolio" align="left">
