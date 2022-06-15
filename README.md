@@ -9,11 +9,15 @@ The following elements are present in this landing:
 - Count Up (animated when the element falls within sight).
 - Animation of filling the progress bar when scrolling (using JavaScript)
 - Photo gallery with filter and animation when hovering
+&nbsp;
+&nbsp;
 
 ## Libraries used
 - `Count.js` - number count animation
 - `Filterizr.js` - javascript element filter
 - `Fancybox.js` - image gallery
+&nbsp;
+&nbsp;
 
 
 ## My Portfolio Link
