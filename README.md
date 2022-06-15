@@ -10,7 +10,7 @@ The following elements are present in the dhow landing page:
 - Animation of the progress bar when scrolling (for the help of JavaScript)
 - Photo gallery with filter and hover animation
 
-<div id="portfolio" style="display:flex;justify-content:center;align-items:center">
+<div id="portfolio" align="center">
   <a href="your-linkedin-URL">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
