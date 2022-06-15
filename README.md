@@ -8,18 +8,14 @@ The following elements are present in this landing:
 - Count Up (animated when the element falls within sight).
 - Animation of filling the progress bar when scrolling (using JavaScript)
 - Photo gallery with filter and animation when hovering
-
+<br>
+[Link to the working page](https://plupiks.github.io/Landing-Page-Creator-2/)
 <br>
 
 ## Libraries used
 - `Count.js` - number count animation
 - `Filterizr.js` - DOM element filter
 - `Fancybox.js` - image gallery
-
-<br>
-
-## Page link
-[Link to the working page](https://plupiks.github.io/Landing-Page-Creator-2/)
 
 <br>
 
