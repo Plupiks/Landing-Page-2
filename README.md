@@ -19,7 +19,6 @@ The following elements are present in this landing:
 <br>
 
 ## My Portfolio Link
-<br>
 <div id="portfolio" align="left">
   <a href="https://www.upwork.com/freelancers/~0175a1803535823693">
     <img src="https://github.com/Plupiks/Landing-Page-Creator-2/blob/main/img/upwork-1.svg" alt="Upwork" width="40" height="40"/>
