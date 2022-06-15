@@ -11,7 +11,10 @@ The following elements are present in the dhow landing page:
 - Photo gallery with filter and hover animation
 
 <div id="portfolio" align="center">
-  <a href="your-linkedin-URL">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  <a href="https://www.upwork.com/freelancers/~0175a1803535823693">
+    <img src="https://github.com/Plupiks/Landing-Page-Creator-2/blob/main/img/upwork-1.svg" alt="Upwork" width=”21px”/>
+  </a>
+   <a href="https://www.weblancer.net/users/VasylykivV/">
+    <img src="https://github.com/Plupiks/Landing-Page-Creator-2/blob/main/img/weblancer.png" alt="Weblancer" width=”21px”/>
   </a>
 </div>
