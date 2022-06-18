@@ -1,236 +1,221 @@
 document.addEventListener('DOMContentLoaded', function () {
-  function menu() {
-    const menuBG = document.querySelector('.header');
-    const menuBody = document.querySelector('.header__body');
-    const mobileMenuBody = document.querySelector('.burger-menu__content');
-    const linksBody = document.querySelector('.nav__links');
-    const links = document.querySelectorAll('.nav__link');
-
-    const checkbox = document.querySelector('.checkbox');
-    const mobileMenuButton = document.querySelector('.burger-menu__button');
+  function burgerMenu() {
+    const burgerMenuButton = document.querySelector('.burger-menu');
+    const checkboxInput = document.querySelector('.checkbox');
+    const burgerMenuBody = document.querySelector('.header');
+    const links = document.querySelectorAll('.link__items');
     const backdrop = document.querySelector('.backdrop');
 
-    const backgroundColor = 'rgb(34, 34, 34)';
-
-    // Переміщаю навігацію до бургер меню
-    function moveLinksToOtherBlock() {
-      $(window).on('load resize', () => {
-        if ($(this).width() <= 992) {
-          $(linksBody).prependTo($(mobileMenuBody));
+    // Слайд вправо дл меню (тільки для моб. пристроїв)
+    function slideRight() {
+      // Ширина від 992px до 376px
+      if ($(window).width() < 992 && $(window).width() > 376) {
+        if ($(checkboxInput).prop('checked') === false) {
+          $(burgerMenuBody).css('transform', 'translateX(0px)');
+          $(backdrop).addClass('backdrop-active');
         } else {
-          $(linksBody).prependTo($(menuBody));
-        }
-      });
-    }
-    moveLinksToOtherBlock();
-
-    // Відкриваю меню при нажимані
-    function showMenuMobile() {
-      // Анімація відкриття для меню
-      function slideRight() {
-        // Ширина від 992px до 376px
-        if ($(window).width() <= 992 && $(window).width() > 400) {
-          if ($(checkbox).prop('checked') === false) {
-            $(mobileMenuBody).css('transform', 'translateX(0px)');
-            $(backdrop).addClass('backdrop-active');
-            $(menuBG).css('background', 'none');
-          } else {
-            $(mobileMenuBody).css('transform', 'translateX(-300px)');
-            $(backdrop).removeClass('backdrop-active');
-            $(menuBG).css('background', 'rgba(255, 255, 255, 0.8)');
-          }
-        }
-
-        // Ширина від 376px до 0px
-        else if ($(window).width() <= 400) {
-          if ($(checkbox).prop('checked') === false) {
-            $(mobileMenuBody).css('transform', 'translateX(0px)');
-            $(backdrop).addClass('backdrop-active');
-            $(menuBG).css('background', 'none');
-          } else {
-            $(mobileMenuBody).css('transform', 'translateX(-395px)');
-            $(backdrop).removeClass('backdrop-active');
-            $(menuBG).css('background', 'rgba(255, 255, 255, 0.8)');
-          }
-        }
-
-        // Ширина від 992px і вище
-        else {
+          $(burgerMenuBody).css('transform', 'translateX(-300px)');
           $(backdrop).removeClass('backdrop-active');
-          $(menuBG).css('background', backgroundColor);
         }
       }
 
-      // Ховаю меню при ресайзі
-      function closeMenuHover() {
-        $(window).on('resize', function () {
-          $(checkbox).prop('checked', false);
+      // Ширина від 376px до 0px
+      else if ($(window).width() < 376) {
+        if ($(checkboxInput).prop('checked') === false) {
+          $(burgerMenuBody).css('transform', 'translateX(0px)');
+          $(backdrop).addClass('backdrop-active');
+        } else {
+          $(burgerMenuBody).css('transform', 'translateX(-375px)');
+          $(backdrop).removeClass('backdrop-active');
+        }
+      }
 
-          // Ширина від 992px до 376px
-          if ($(window).width() <= 992 && $(window).width() > 400) {
-            $(mobileMenuBody).css('transform', 'translateX(-300px)');
-            $(backdrop).removeClass('backdrop-active');
-            $(menuBG).css('background', 'rgba(255, 255, 255, 0.8)');
-          }
+      // Ширина від 992px і вище
+      else {
+        $(backdrop).removeClass('backdrop-active');
+      }
+    }
 
-          // Ширина від 376px до 0px
-          else if ($(window).width() < 400) {
-            $(mobileMenuBody).css('transform', 'translateX(-395px)');
-            $(backdrop).removeClass('backdrop-active');
-            $(menuBG).css('background', 'rgba(255, 255, 255, 0.8)');
-          }
+    // Ховаю меню при ресайзі
+    $(window).on('resize', function () {
+      $(checkboxInput).prop('checked', false);
 
-          // Ширина від 992px і вище
-          else {
-            $(mobileMenuBody).css('transform', 'translateX(0px)');
-            $(backdrop).removeClass('backdrop-active');
-            $(menuBG).css('background', backgroundColor);
+      // Ширина від 992px до 376px
+      if ($(window).width() < 992 && $(window).width() > 376) {
+        $(burgerMenuBody).css('transform', 'translateX(-300px)');
+        $(backdrop).removeClass('backdrop-active');
+      }
+
+      // Ширина від 376px до 0px
+      else if ($(window).width() < 376) {
+        $(burgerMenuBody).css('transform', 'translateX(-375px)');
+        $(backdrop).removeClass('backdrop-active');
+      }
+
+      // Ширина від 992px і вище
+      else {
+        $(burgerMenuBody).css('transform', 'translateX(0px)');
+        $(backdrop).removeClass('backdrop-active');
+      }
+    });
+
+    // Показую меню при нажиманні на кнопку
+    burgerMenuButton.addEventListener('click', function () {
+      slideRight();
+      $(checkboxInput).prop('checked', !$(checkboxInput).prop('checked'));
+    });
+
+    // Ховаю меню при нажиманні на силку
+    links.forEach(function (link, i) {
+      link.addEventListener('click', function () {
+        slideRight();
+        $(checkboxInput).prop('checked', !$(checkboxInput).prop('checked'));
+      });
+    });
+
+    backdrop.addEventListener('click', function () {
+      slideRight();
+      $(checkboxInput).prop('checked', !$(checkboxInput).prop('checked'));
+    });
+  }
+  burgerMenu();
+
+  // API Type JS
+  function typeJs() {
+    const stringArray = $('.typed').data('typed-items').split(',');
+    const typed = new Typed('#typed', {
+      strings: [...stringArray],
+      typeSpeed: 100,
+      backSpeed: 80,
+      loop: true,
+      backDelay: 1800,
+    });
+  }
+  typeJs();
+
+  // API CountUp JS
+  function countOnScroll() {
+    if ($('section').hasClass('facts')) {
+      // Плавність option
+      const easingFn = function (t, b, c, d) {
+        var ts = (t /= d) * t;
+        var tc = ts * t;
+        return b + c * (tc + -3 * ts + 3 * t);
+      };
+
+      // Опції option
+      const options = {
+        easingFn,
+        duration: 1.2,
+        // enableScrollSpy: false,
+        scrollSpyOnce: true,
+      };
+
+      const countText = document.querySelectorAll('.facts-ci__number'); // Вибираю елемент який буде мінятись
+
+      //Виконую скріпт count для кожного з текстів
+      for (let i = 0; i < countText.length; i++) {
+        const countTextValue = countText[i].getAttribute('data-count'); // Отримую значення з дата атрибудів для кожного елементу
+        const countUp = new CountUp(countText[i], countTextValue, options); // 1 - елемент в якому міняється число; 2 - наше число
+
+        // Анімації починається тільки коли видно елемент
+        $(window).on('load scroll', function () {
+          let scrollOffset = scrollY;
+          let factsOffset = $('.facts').offset().top - 550;
+
+          if (scrollOffset > factsOffset) {
+            countUp.start();
           }
         });
       }
-      closeMenuHover();
+    }
+  }
+  countOnScroll();
 
-      // Показую меню при нажиманні на кнопку
-      mobileMenuButton.addEventListener('click', function () {
-        slideRight();
-        $(checkbox).prop('checked', !$(checkbox).prop('checked'));
-      });
+  // API Count JS (for progress bar)
+  function ProgressOnScroll() {
+    if ($('section').hasClass('skills')) {
+      // заповнення прогресбару
+      const progressBodyFill1 = document.querySelector('.progress__bar_fill1');
+      const progressBodyFill2 = document.querySelector('.progress__bar_fill2');
+      const progressBodyFill3 = document.querySelector('.progress__bar_fill3');
 
-      // Ховаю меню при нажиманні на силку
-      links.forEach(function (link, i) {
-        link.addEventListener('click', function () {
-          slideRight();
-          $(checkbox).prop('checked', !$(checkbox).prop('checked'));
-        });
-      });
+      // значення заповнення прогресбару (у відсотках)
+      const progressBodyFillValue1 = +progressBodyFill1.getAttribute('data-percent');
+      const progressBodyFillValue2 = +progressBodyFill2.getAttribute('data-percent');
+      const progressBodyFillValue3 = +progressBodyFill3.getAttribute('data-percent');
 
-      backdrop.addEventListener('click', function () {
-        slideRight();
-        $(checkbox).prop('checked', !$(checkbox).prop('checked'));
+      // текст заповнення прогресбару
+      const progressTextValue1 = document.querySelector('.progress__label_value1');
+      const progressTextValue2 = document.querySelector('.progress__label_value2');
+      const progressTextValue3 = document.querySelector('.progress__label_value3');
+
+      // Плавність
+      const easingFn = function (t, b, c, d) {
+        var ts = (t /= d) * t;
+        var tc = ts * t;
+        return b + c * (tc + -3 * ts + 3 * t);
+      };
+
+      // Опції
+      const options = {
+        easingFn,
+        suffix: '%',
+        duration: 1.2,
+        enableScrollSpy: false,
+        scrollSpyOnce: true,
+      };
+
+      // Функція збільшення числа
+      const countUp1 = new CountUp(progressTextValue1, progressBodyFillValue1, options);
+      const countUp2 = new CountUp(progressTextValue2, progressBodyFillValue2, options);
+      const countUp3 = new CountUp(progressTextValue3, progressBodyFillValue3, options);
+
+      // Активую анімацію заповнення при скролі
+      $(window).on('load scroll', function () {
+        let scrollOffset = scrollY;
+        let skillsOffset = $('.skills').offset().top - 650;
+
+        if (scrollOffset > skillsOffset) {
+          $(progressBodyFill1).animate({ width: progressBodyFillValue1 + '%' }, 1200);
+          $(progressBodyFill2).animate({ width: progressBodyFillValue2 + '%' }, 1200);
+          $(progressBodyFill3).animate({ width: progressBodyFillValue3 + '%' }, 1200);
+
+          countUp1.start();
+          countUp2.start();
+          countUp3.start();
+        }
       });
     }
-    showMenuMobile();
   }
-  menu();
+  ProgressOnScroll();
 
-  function benefitsBlockWidth() {
-    const container = document.querySelector('.container');
-    const benefitsBody = document.querySelector('.benefits__body');
-    const benefitsSection = document.querySelectorAll('.benefits__section');
-    const sectionLeftBlock = document.querySelectorAll('.section-block__body_left');
-    const sectionRightBlock = document.querySelector('.section-block__body_right');
+  // Добавляю активний клас при кліку для меню фільтра
+  function addActiveClass() {
+    let filterItems = document.getElementsByClassName('filter__item');
+    let active = document.getElementsByClassName('filter__item_active');
+    for (i = 0; filterItems.length > i; i++) {
+      filterItems[i].onclick = function () {
+        let currentActive = active[0]; //отримуємо той елемент у якого є активний клас
 
-    $(window).on('load resize', () => {
-      const padingValue = calcPadding(benefitsBody, container); // (section-width, container-width)
-      const widthValue = calcWidth(benefitsBody, sectionRightBlock, padingValue, 60); // (section-width, text-block, text-block padding, margin)
-      const benefitsSectionLeft = [];
-      const benefitsSectionRight = [];
-
-      // Calculate padding
-      function calcPadding(benefitsBody, container) {
-        return (benefitsBody.clientWidth - container.clientWidth) / 2;
-      }
-
-      // Calculate width
-      function calcWidth(benefitsBody, sectionRightBlock, padingValue, margin) {
-        return benefitsBody.clientWidth - sectionRightBlock.clientWidth - padingValue - margin;
-      }
-
-      // set width for image block
-      function setWidthForImage() {
-        if ($(window).width() > 918) {
-          sectionLeftBlock.forEach((sectionLeftBlock) => {
-            sectionLeftBlock.style.width = widthValue + 'px';
-          });
-        } else {
-          sectionLeftBlock.forEach((sectionLeftBlock) => {
-            sectionLeftBlock.style.width = '100%';
-          });
+        //При кліку ми удаляємо активний клас у елемента у якого був активний клас
+        if (currentActive) {
+          currentActive.classList.remove('filter__item_active');
         }
-      }
-      setWidthForImage();
 
-      function setPaddingforTextBlock() {
-        benefitsSectionLeft.push(benefitsSection[0], benefitsSection[2]);
-        benefitsSectionRight.push(benefitsSection[1], benefitsSection[3]);
-
-        if ($(window).width() > 1250) {
-          benefitsSectionLeft.forEach((leftBlock) => {
-            leftBlock.style.paddingRight = padingValue + 'px';
-          });
-
-          benefitsSectionRight.forEach((rightBlock) => {
-            rightBlock.style.paddingLeft = padingValue + 'px';
-          });
-        } else if ($(window).width() < 1250 && $(window).width() > 918) {
-          benefitsSectionLeft.forEach((leftBlock) => {
-            leftBlock.style.paddingRight = '20px';
-          });
-
-          benefitsSectionRight.forEach((rightBlock) => {
-            rightBlock.style.paddingLeft = '20px';
-          });
-        } else {
-          benefitsSectionLeft.forEach((leftBlock) => {
-            leftBlock.style.padding = '0';
-          });
-
-          benefitsSectionRight.forEach((rightBlock) => {
-            rightBlock.style.padding = '0';
-          });
+        // Добавляємо активний клас тому елементу на який нажали якщо у нього немає активного класу
+        if (filterItems[i] !== currentActive) {
+          this.classList.add('filter__item_active');
         }
-      }
-      setPaddingforTextBlock();
-    });
+      };
+    }
   }
-  benefitsBlockWidth();
+  addActiveClass();
 
-  function connectBlockWidth() {
-    const container = document.querySelector('.container');
-    const connectBody = document.querySelector('.connect__body');
-    const leftBlock = document.querySelector('.connect__body_left');
-    const rightBlock = document.querySelector('.connect__body_right');
-
-    $(window).on('load resize', () => {
-      const padingValue = calcPadding(connectBody, container); // (section-width, container-width)
-      const widthValue = calcWidth(connectBody, rightBlock, padingValue, 60); // (section-width, text-block, text-block padding, margin)
-
-      // Calculate padding
-      function calcPadding(connectBody, container) {
-        return (connectBody.clientWidth - container.clientWidth) / 2;
-      }
-
-      // Calculate width
-      function calcWidth(connectBody, rightBlock, padingValue, margin) {
-        return connectBody.clientWidth - rightBlock.clientWidth - padingValue - margin;
-      }
-
-      // set width for image block
-      function setWidthForImage() {
-        if ($(window).width() > 918) {
-          leftBlock.style.width = widthValue + 'px';
-        } else {
-          leftBlock.style.width = '100%';
-        }
-      }
-      setWidthForImage();
-
-      function setPaddingforTextBlock() {
-        if ($(window).width() > 1250) {
-          connectBody.style.paddingRight = padingValue + 'px';
-        } else if ($(window).width() < 1250 && $(window).width() > 918) {
-          connectBody.style.paddingRight = '20px';
-        } else {
-          connectBody.style.padding = '0';
-        }
-      }
-      setPaddingforTextBlock();
-    });
-  }
-  connectBlockWidth();
-
+  // Галлерея фото
   function gallery() {
-    Fancybox.bind('.fancybox-img-single', {
+    //Таким чином вибираю тільки не відфільтровані елементи
+    Fancybox.bind('.filtr-item:not(.filteredOut) > img', {
       dragToClose: false,
 
       Toolbar: false,
@@ -241,11 +226,23 @@ document.addEventListener('DOMContentLoaded', function () {
         click: false,
         wheel: 'slide',
       },
+
+      on: {
+        initCarousel: (fancybox) => {
+          const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+
+          fancybox.$container.style.setProperty('--bg-image', `url("${slide.$thumb.src}")`);
+        },
+        'Carousel.change': (fancybox, carousel, to, from) => {
+          const slide = carousel.slides[to];
+
+          fancybox.$container.style.setProperty('--bg-image', `url("${slide.$thumb.src}")`);
+        },
+      },
     });
 
-    Fancybox.bind('.gallery_images_image img', {
+    Fancybox.bind('.about__image', {
       dragToClose: false,
-      groupAll: true,
 
       Toolbar: false,
       closeButton: 'outside',
@@ -259,6 +256,47 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   gallery();
 
+  // Вирівнюю текст у services по висоті
+  function textAlignHeight() {
+    // Заголовок
+    const servicesTitles = document.querySelectorAll('.services-column__title');
+    const servicesTitlesHeight = Array.from(servicesTitles).map((e) => e.offsetHeight);
+    const maxHeightTitle = Math.max(...servicesTitlesHeight);
+    for (let i = 0; i < servicesTitles.length; i++) {
+      servicesTitles[i].style.minHeight = maxHeightTitle + 'px';
+    }
+
+    // Текст
+    const servicesText = document.querySelectorAll('.services-column__text');
+    const servicesTextHeight = Array.from(servicesText).map((e) => e.offsetHeight);
+    const maxHeightText = Math.max(...servicesTextHeight);
+    for (let i = 0; i < servicesText.length; i++) {
+      servicesText[i].style.minHeight = maxHeightText + 'px';
+    }
+  }
+  textAlignHeight();
+
+  //ButtonUp
+  function buttonUp() {
+    // Показ кнопки
+    const buttonUp = document.querySelector('.button-up');
+    $(window).on('load resize scroll', function () {
+      const offsetTop = scrollY;
+      if (offsetTop >= 480) {
+        buttonUp.classList.add('button-show');
+      } else {
+        buttonUp.classList.remove('button-show');
+      }
+    });
+
+    // Скролл наверх
+    buttonUp.addEventListener('click', function () {
+      $('html,body').animate({ scrollTop: $('.hero').offset().top + 'px' }, 500);
+    });
+  }
+  buttonUp();
+
+  // Скрол до секції по кліку на силки в меню
   function scrollToSection() {
     const anchors = document.querySelectorAll('a[href^="#s-"]');
 
@@ -273,33 +311,25 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   scrollToSection();
 
-  // // Активний клас для меню при скролі
-  // function activeClassMenu() {
-  //   const menuLinks = document.querySelectorAll('.link a[href^="#s-"]');
-  //   const sections = document.querySelectorAll('.section-anchor');
-  //   $(window).on('scroll load', () => {
-  //     const scrollTop = scrollY;
+  // Активний клас для меню при скролі
+  function activeClassMenu() {
+    const menuLinks = document.querySelectorAll('.link a[href^="#s-"]');
+    const sections = document.querySelectorAll('section');
+    $(window).on('scroll load', () => {
+      const scrollTop = scrollY;
 
-  //     sections.forEach((section) => {
-  //       if (section.offsetTop <= scrollTop + 500) {
-  //         menuLinks.forEach((link) => {
-  //           if (link.getAttribute('href').replace('#', '') === section.getAttribute('id')) {
-  //             link.classList.add('link-active');
-  //           } else {
-  //             link.classList.remove('link-active');
-  //           }
-  //         });
-  //       }
-  //     });
-  //   });
-  // }
-  // activeClassMenu();
-
-  AOS.init({
-    // Global settings:
-    once: true,
-    duration: 1000,
-    delay: 100,
-    anchorPlacement: 'top',
-  });
+      sections.forEach((section) => {
+        if (section.offsetTop <= scrollTop + 500) {
+          menuLinks.forEach((link) => {
+            if (link.getAttribute('href').replace('#', '') === section.getAttribute('id')) {
+              link.classList.add('link-active');
+            } else {
+              link.classList.remove('link-active');
+            }
+          });
+        }
+      });
+    });
+  }
+  activeClassMenu();
 });
