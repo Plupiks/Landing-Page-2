@@ -10,7 +10,7 @@ The following elements are present in this landing:
 - Animation of filling the progress bar when scrolling (using JavaScript)
 - Photo gallery with filter and animation when hovering
 
-[Link to the working page](https://plupiks.github.io/Landing-Page-Creator-2/)
+[Link to the working page](https://plupiks.github.io/Landing-Page-2/)
 
 <br>
 
